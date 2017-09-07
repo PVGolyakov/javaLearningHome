@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaLearningHome.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaLearningHome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaLearningHome_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaLearningHome_main.iml" group="JavaLearningHome" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaLearningHome_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaLearningHome_test.iml" group="JavaLearningHome" />
+    </modules>
+  </component>
+</project>
