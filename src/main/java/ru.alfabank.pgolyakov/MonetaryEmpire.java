@@ -1,7 +1,5 @@
 package ru.alfabank.pgolyakov;
 
-import java.util.Arrays;
-
 /**
  * Created by Pavel on 06.09.2017.
  */
@@ -16,11 +14,11 @@ class Warehouse {
 
 
     public static void main(String[] args) {
-        Vegetable allVegs = new Vegetable("овощи", 150);
-        Linens allLinens = new Linens("белье", 100);
+//        Vegetable allVegs = new Vegetable("овощи", 150);
+//        Linens allLinens = new Linens("белье", 100);
 
-        allVegs.nameVegetable();
-        allLinens.nameLinens();
+//        allVegs.nameVegetable();
+//        allLinens.nameLinens();
 
 
     }
@@ -46,33 +44,34 @@ class Warehouse {
 
 
 class Product {
-    String typeProduct; //Тип продукта
+     String articleCode; //Номер товара
     Integer priceProduct; //Цена
+    String prodName; //Название продукта
 
-    Product(String typeProduct, Integer priceProduct) {
-        this.typeProduct = typeProduct;
+    Product(String articleCode, Integer priceProduct, String prodName) {
+        this.articleCode = articleCode;
         this.priceProduct = priceProduct;
+        this.prodName = prodName;
     }
 }
 
 class Vegetable extends Product {
-    String nameVegetable; //Название овоща
+    String vendorCode; //Код поставщика
 
-    public Vegetable(String typeProduct, Integer priceProduct) {
-        super(typeProduct, priceProduct);
+    Vegetable(String articleCode, Integer priceProduct, String prodName) {
+        super(articleCode, priceProduct, prodName);
     }
 
-
     public void nameVegetable() {
-        System.out.println(nameVegetable);
+        System.out.println(vendorCode);
     }
 }
 
 class Linens extends Product {
     String brandLines; //Марка постельного белья
 
-    public Linens(String typeProduct, Integer priceProduct) {
-        super(typeProduct, priceProduct);
+    Linens(String articleCode, Integer priceProduct, String prodName) {
+        super(articleCode, priceProduct, prodName);
     }
 
 
