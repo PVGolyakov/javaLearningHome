@@ -11,16 +11,17 @@ public class MonetaryEmpire {
 
     public static void main(String[] args) {
         Warehouse warehouse1 = new Warehouse();
-        List<Vegetable> vegetableArrayList = new ArrayList<Vegetable>();
-        List<Linen> linenArrayList = new ArrayList<Linen>();
-
-        vegetableArrayList.add(new Vegetable("Томат", 100, "Томат новогорский"));
-        linenArrayList.add(new Linen("Бранд", 1700, "Наволочка Бранд"));
-
-        System.out.println(warehouse1);
+        List<Vegetable> vegetables = new ArrayList<Vegetable>();
+        List<Linen> linens = new ArrayList<Linen>();
 
 
+        vegetables.add(new Vegetable("Томат", 100, "Томат новогорский"));
+        vegetables.add(new Vegetable("Огурец", 120, "Огурец Тамбовский"));
+        vegetables.add(new Vegetable("Перец", 160, "Перец красный"));
 
+
+        linens.add(new Linen("Золушка", 1600, "Комплект двуспального белья Золушка"));
+        linens.add(new Linen("Бранд", 1700, "Наволочка Бранд"));
 
 
 
@@ -29,40 +30,12 @@ public class MonetaryEmpire {
 
 
 class Warehouse {
-
-
-    public static void main(String[] args) {
-
-
-        List<Vegetable> vegetables = new ArrayList<Vegetable>();
-        vegetables.add(new Vegetable("Томат", 100, "Томат новогорский"));
-        vegetables.add(new Vegetable("Огурец", 120, "Огурец Тамбовский"));
-        vegetables.add(new Vegetable("Перец", 160, "Перец красный"));
-
-
-        for (
-                Vegetable takeVegetable : vegetables)
-
-        {
-            System.out.println(takeVegetable);
-        }
-
-
-        List<Linen> linens = new ArrayList<Linen>();
-        linens.add(new Linen("Золушка", 1600, "Комплект двуспального белья Золушка"));
-        linens.add(new Linen("Бранд", 1700, "Наволочка Бранд"));
-
-
-        for (Linen takeLinen : linens)
-
-        {
-            System.out.println(takeLinen);
-        }
-
-    }
+    List<Vegetable> vegetables = new ArrayList<Vegetable>();
+    List<Linen> linens = new ArrayList<Linen>();
 
 
 }
+
 
 class Vegetable extends Product {
     String vendorCode; //Код поставщика
