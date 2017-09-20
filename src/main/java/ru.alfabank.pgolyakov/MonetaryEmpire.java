@@ -11,19 +11,10 @@ public class MonetaryEmpire {
 
     public static void main(String[] args) {
         Warehouse warehouse1 = new Warehouse();
-        List<Vegetable> vegetables = new ArrayList<Vegetable>();
-        List<Linen> linens = new ArrayList<Linen>();
-
-
-        vegetables.add(new Vegetable("Томат", 100, "Томат новогорский"));
-        vegetables.add(new Vegetable("Огурец", 120, "Огурец Тамбовский"));
-        vegetables.add(new Vegetable("Перец", 160, "Перец красный"));
-
-
-        linens.add(new Linen("Золушка", 1600, "Комплект двуспального белья Золушка"));
-        linens.add(new Linen("Бранд", 1700, "Наволочка Бранд"));
-
-
+        warehouse1.getLinens().add(new Linen("Бранд", 1700, "Наволочка Бранд"));
+        warehouse1.getVegetables().add(new Vegetable("Томат", 100, "Томат новогорский"));
+        warehouse1.getVegetables().add(new Vegetable("Перец", 160, "Перец красный"));
+        warehouse1.getVegetables().add(new Vegetable("Огурец", 130, "Огурец Тамбовскией"));
 
     }
 }
@@ -32,6 +23,24 @@ public class MonetaryEmpire {
 class Warehouse {
     List<Vegetable> vegetables = new ArrayList<Vegetable>();
     List<Linen> linens = new ArrayList<Linen>();
+
+    public List<Vegetable> getVegetables() {
+        return vegetables;
+    }
+
+    public void setVegetables(List<Vegetable> vegetables) {
+        this.vegetables = vegetables;
+    }
+
+    public List<Linen> getLinens() {
+        return linens;
+    }
+
+    public void setLinens(List<Linen> linens) {
+        this.linens = linens;
+    }
+
+
 
 
 }
