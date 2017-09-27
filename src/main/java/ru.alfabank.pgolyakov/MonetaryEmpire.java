@@ -11,10 +11,15 @@ public class MonetaryEmpire {
 
     public static void main(String[] args) {
         Warehouse warehouse1 = new Warehouse();
-        warehouse1.getLinens().add(new Linen("Бранд", 1700, "Наволочка Бранд"));
-        warehouse1.getVegetables().add(new Vegetable("Томат", 100, "Томат новогорский"));
-        warehouse1.getVegetables().add(new Vegetable("Перец", 160, "Перец красный"));
-        warehouse1.getVegetables().add(new Vegetable("Огурец", 130, "Огурец Тамбовскией"));
+        warehouse1.getProducts().add(new Linen("Бранд", 1700, "Наволочка Бранд"));
+        warehouse1.getProducts().add(new Vegetable("Томат", 100, "Томат новогорский"));
+        warehouse1.getProducts().add(new Vegetable("Перец", 160, "Перец красный"));
+        warehouse1.getProducts().add(new Vegetable("Огурец", 130, "Огурец Тамбовскией"));
+
+        System.out.println(warehouse1.getProducts().get(0).articleCode);
+        System.out.println(warehouse1.getProducts().get(1).articleCode);
+        System.out.println(warehouse1.getProducts().get(2).articleCode);
+        System.out.println(warehouse1.getProducts().get(3).articleCode);
 
     }
 }
@@ -23,6 +28,16 @@ public class MonetaryEmpire {
 class Warehouse {
     List<Vegetable> vegetables = new ArrayList<Vegetable>();
     List<Linen> linens = new ArrayList<Linen>();
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    List<Product> products = new ArrayList<Product>();
 
     public List<Vegetable> getVegetables() {
         return vegetables;
@@ -39,6 +54,12 @@ class Warehouse {
     public void setLinens(List<Linen> linens) {
         this.linens = linens;
     }
+
+
+
+
+//list от Producta
+
 
 
 
